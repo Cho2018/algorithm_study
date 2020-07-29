@@ -1,0 +1,24 @@
+package Java.Y2020.BOJ;
+
+import java.io.*;
+import java.util.*;
+
+public class N2751_2007 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+
+        int n = Integer.parseInt(bf.readLine());
+        boolean[] arr = new boolean[2000001];
+
+        for (int i = 0; i < n; i++)
+            arr[Integer.parseInt(bf.readLine()) + 1000000] = true;
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 2000001; i++) {
+            if (arr[i])
+                sb.append(i - 1000000).append("\n");
+        }
+
+        System.out.println(sb);
+    }
+}
